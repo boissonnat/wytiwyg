@@ -14,5 +14,8 @@
 
 <div class="form-actions">
   <a ng-href="#/documents/{{document.id}}" class="btn btn-default">Cancel</a>
-  <button type="submit" ng-disabled="documentForm.$invalid" class="btn btn-primary">Save</button>
+  <button type="submit" ng-disabled="documentForm.$invalid" class="btn btn-primary">
+    <i class="fa fa-spinner fa-spin" wait-button></i>
+    Save
+  </button>
 </div>
