@@ -11,20 +11,6 @@ section#document {
     padding-bottom: $line-height * 0.3;
   }
 
-  .markdown {
-    h1 {
-      font-weight: 500;
-    }
-
-    h2 {
-      margin-top: $line-height * 1.5 ;
-      font-weight: 400;
-    }
-
-    h3 {
-      font-weight: 300;
-    }
-  }
 }
 
 ul.documents-list {

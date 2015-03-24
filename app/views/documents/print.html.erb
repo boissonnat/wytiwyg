@@ -1,11 +1,14 @@
 <div class="container">
-<h1>
-  <%= @document.title %>
-</h1>
 
-<%= markdown(@document.body) %>
+    <h1>
+      <%= @document.title %>
+    </h1>
+
+    <div class="markdown">
+      <%= markdown(@document.body) %>
+    </div>
+
 </div>
-
 <script type="text/javascript">
   Prism.highlightAll();
 </script>
