@@ -1,10 +1,11 @@
 class DocumentsController < ApplicationController
   before_action :set_default_response_format
+  layout 'print', only: [:print]
 
   # Ensure we have a connected user
   before_filter :authenticate_user!
   # set the actual registration_application
-  before_action :set_document, only: [:show, :edit, :update, :destroy]
+  before_action :set_document, only: [:show, :edit, :update, :destroy, :print]
 
   def index
     @documents = Document.all.order('title ASC')
@@ -42,10 +43,17 @@ class DocumentsController < ApplicationController
     render json: {status: 200}
   end
 
+  def print
+  end
+
   protected
 
   def set_default_response_format
-    request.format = :json
+    if action_name == 'print'
+      request.format = :html
+    else
+      request.format = :json
+    end
   end
 
 
