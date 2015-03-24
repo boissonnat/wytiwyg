@@ -1,5 +1,5 @@
 angular.module('mouApp')
-    .controller('DocumentsCtrl', function ($rootScope, $window, $scope, $http, $sce, $location, $routeParams, Documents) {
+    .controller('DocumentsCtrl', function ($rootScope, $window, $scope, $http, $sce, $location, $routeParams, $timeout,  Documents) {
 
         var converter = new Showdown.converter();
 
@@ -35,6 +35,9 @@ angular.module('mouApp')
 
         $scope.change = function (body) {
             $scope.bodyHtml = $sce.trustAsHtml(converter.makeHtml(body));
-
+            // Syntax highlighting, the hacky way... (using a directive would be better)
+            $timeout(function(){
+                Prism.highlightAll();
+            }, 0, true);
         }
     });
