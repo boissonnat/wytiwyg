@@ -4,44 +4,44 @@ angular.module('mouApp')
 
         $scope.appendTitle = function () {
             var bodyElm = document.getElementById("bodyElm"); //.value += "#";
-            insertAtCursor(bodyElm, '#');
+            insertAtCursor(bodyElm, '# ', 2);
         }
 
         $scope.appendBold = function () {
             var bodyElm = document.getElementById("bodyElm"); //.value += "#";
-            insertAtCursor(bodyElm, '__ __');
+            insertAtCursor(bodyElm, '____', 2);
         }
 
         $scope.appendItalic = function () {
             var bodyElm = document.getElementById("bodyElm"); //.value += "#";
-            insertAtCursor(bodyElm, '_ _');
+            insertAtCursor(bodyElm, '__', 1);
         }
 
         $scope.appendLink = function () {
             var bodyElm = document.getElementById("bodyElm"); //.value += "#";
-            insertAtCursor(bodyElm, "[Link to google](https://www.google.com)");
+            insertAtCursor(bodyElm, "[Link to google](https://www.google.com)", 1);
         }
 
         $scope.appendQuote = function () {
             var bodyElm = document.getElementById("bodyElm"); //.value += "#";
-            insertAtCursor(bodyElm, ">");
+            insertAtCursor(bodyElm, "> ", 3);
         }
 
         $scope.appendCode = function () {
             var bodyElm = document.getElementById("bodyElm"); //.value += "#";
-            insertAtCursor(bodyElm, "``` ```");
+            insertAtCursor(bodyElm, "```language-\n```", 12);
         }
 
         $scope.appendUnorderedList = function () {
             var bodyElm = document.getElementById("bodyElm"); //.value += "#";
-            insertAtCursor(bodyElm, "* ");
+            insertAtCursor(bodyElm, "* ", 3);
         }
 
         $scope.appendOrderedList = function () {
             var bodyElm = document.getElementById("bodyElm"); //.value += "#";
-            insertAtCursor(bodyElm, "1. ");
+            insertAtCursor(bodyElm, "1. ", 4);
         }
-        function insertAtCursor(myField, myValue) {
+        function insertAtCursor(myField, myValue, newCursorPosition) {
             if (myField.selectionStart || myField.selectionStart == '0') {
                 var startPos = myField.selectionStart;
                 var endPos = myField.selectionEnd;
@@ -49,8 +49,8 @@ angular.module('mouApp')
                 + myValue
                 + myField.value.substring(endPos, myField.value.length);
                 myField.focus();
-                myField.selectionStart = startPos + myValue.length;
-                myField.selectionEnd = startPos + myValue.length;
+                myField.selectionStart = startPos + newCursorPosition;
+                myField.selectionEnd = startPos + newCursorPosition;
             } else {
                 myField.value += myValue;
             }
