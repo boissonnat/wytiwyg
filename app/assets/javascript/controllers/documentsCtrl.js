@@ -6,6 +6,7 @@ angular.module('mouApp')
         if ($routeParams.documentId) {
             $scope.document = Documents.show({id: $routeParams.documentId}, function(data){
                 $scope.bodyHtml = $sce.trustAsHtml(converter.makeHtml(data.body));
+                Prism.highlightAll();
             });
 
         }
@@ -34,5 +35,6 @@ angular.module('mouApp')
 
         $scope.change = function (body) {
             $scope.bodyHtml = $sce.trustAsHtml(converter.makeHtml(body));
+
         }
     });

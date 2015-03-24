@@ -1,18 +1,18 @@
-var mouApp = angular.module('mouApp', ['ui.router','ngResource', 'ngRoute', 'ngAnimate']);
+var mouApp = angular.module('mouApp', ['ui.router', 'ngResource', 'ngRoute', 'ngAnimate']);
 
 mouApp.config([
     '$stateProvider',
     '$urlRouterProvider',
     '$resourceProvider',
     '$routeProvider',
-    function($stateProvider, $urlRouterProvider, $resourceProvider, $routeProvider) {
+    function ($stateProvider, $urlRouterProvider, $resourceProvider, $routeProvider) {
         // Don't strip trailing slashes from calculated URLs
         $resourceProvider.defaults.stripTrailingSlashes = false;
 
         $routeProvider.
-            when('/documents/home',  {
+            when('/documents/home', {
                 templateUrl: 'documents/home.html',
-                controller: 'DocumentsCtrl'
+                controller: 'HomeCtrl'
             }).
             when('/documents/new', {
                 templateUrl: 'documents/new.html',
@@ -32,7 +32,7 @@ mouApp.config([
 
     }])
 
-mouApp.directive('documentList', function(Documents) {
+mouApp.directive('documentList', function (Documents) {
     return {
         templateUrl: 'documents/_list.html',
         controller: 'DocumentsListCtrl',
@@ -44,21 +44,21 @@ mouApp.directive('documentList', function(Documents) {
     }
 });
 
-mouApp.directive('markdownActions', function() {
+mouApp.directive('markdownActions', function () {
     return {
         templateUrl: 'documents/_markdown_actions.html',
         controller: 'MarkdownCtrl'
     }
 });
 
-mouApp.directive('documentForm', function() {
+mouApp.directive('documentForm', function () {
     return {
         templateUrl: 'documents/_form.html',
         controller: 'DocumentsCtrl'
     }
 });
 
-mouApp.directive('documentInfos', function() {
+mouApp.directive('documentInfos', function () {
     return {
         templateUrl: 'documents/_infos.html',
         controller: 'DocumentsCtrl'

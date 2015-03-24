@@ -5,6 +5,8 @@
 @import "font-awesome-sprockets";
 @import "font-awesome";
 
+
+
 // Import custom variables
 @import "variables";
 
@@ -19,3 +21,6 @@
 // Import page-specific
 @import "login";
 @import "documents";
+
+// Import prism (syntax highlighting)
+@import "prism";

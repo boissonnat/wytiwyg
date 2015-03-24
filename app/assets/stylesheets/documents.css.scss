@@ -17,6 +17,11 @@ section#document {
     }
 
     h2 {
+      margin-top: $line-height * 1.5 ;
+      font-weight: 400;
+    }
+
+    h3 {
       font-weight: 300;
     }
   }

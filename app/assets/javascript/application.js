@@ -8,7 +8,9 @@
 //= require angular-animate
 //= require showdown
 //= require mouApp
+//= require prism
 //= require controllers/documentsCtrl
 //= require controllers/documentsListCtrl
 //= require controllers/markdownCtrl
+//= require controllers/homeCtrl
 //= require services/documentsServices

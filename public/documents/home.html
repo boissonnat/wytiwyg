@@ -1,6 +1,33 @@
 <h1 class="funny">"What You Type Is What You Get"</h1>
 
-<h2 class="funny">The markdown editor angularjs-based</h2>
+<h2 class="text-center">The markdown editor angularjs-based</h2>
+
+<div class="row">
+  <div class="col-md-8 col-md-offset-2">
+    <p class="text-center lead">
+      Markdown is a way to style text on the web. You control the display of the document;
+      formatting words as bold or italic, adding images, and creating lists are just a few of
+      the things we can do with Markdown. Mostly, Markdown is just regular text with a few non-alphabetic
+      characters thrown in, like # or *.
+    </p>
+  </div>
+</div>
+
+<div class="row">
+  <div class="col-md-6">
+    <h1 class="funny">What you type ...</h1>
+<pre><code class="language-markdown" ng-bind="rowMd"></code></pre>
+
+  </div>
+
+  <div class="col-md-6">
+    <h1 class="funny">... is what you get !</h1>
+    <div id="markdownPreview" class="markdown" ng-bind-html="convertedMd"></div>
+  </div>
+</div>
+
+
+<hr/>
 
 <h3>What does this app</h3>
 <p>
@@ -13,7 +40,8 @@
 <ul>
   <li>Protect every document behind an authentication process</li>
   <li>CRUD operations available on all documents</li>
-  <li>Markdown edition with real-time HTML renderer and shortcuts for markdown edition </li>
+  <li>Markdown edition with real-time HTML renderer, shortcuts for markdown edition </li>
+  <li>Code syntax highlighting</li>
   <li>Fully responsive design</li>
 </ul>
 
@@ -35,3 +63,7 @@
 <p>
   Plus, it's completely open sourced, fork us on <a href="https://www.github.com/boissonnat">GitHub</a>.
 </p>
+
+<script type="text/javascript">
+  Prism.highlightAll();
+</script>
