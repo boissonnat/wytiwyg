@@ -27,10 +27,15 @@ angular.module('mouApp')
         };
 
         $scope.destroyPost = function () {
-            Documents.destroy({id: $routeParams.documentId}, function () {
-                $window.location.href = '#/home';
-                $rootScope.$broadcast('userLoggedIn');
-            });
+            var confirmDelete = $window.confirm('Are you absolutely sure you want to delete?');
+
+            if (confirmDelete) {
+                Documents.destroy({id: $routeParams.documentId}, function () {
+                    $window.location.href = '#/home';
+                    $rootScope.$broadcast('userLoggedIn');
+                });
+            }
+
         };
 
         $scope.change = function (body) {
