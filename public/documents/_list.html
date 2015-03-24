@@ -1,8 +1,18 @@
-<input type="text" ng-model="search.title" class="form-control input-sm" placeholder="Filter">
-<ul class="list-unstyled">
-  <li ng-class="{ active: isActive('{{document.id}}')}" class="animated roll" ng-repeat="document in documents | filter:search">
+<div class="hidden-xs">
+  <input type="text" ng-model="search.title" class="form-control input-sm" placeholder="Filter">
+  <ul class="list-unstyled">
+    <li ng-class="{ active: isActive('{{document.id}}')}" class="animated roll" ng-repeat="document in documents | filter:search">
+      <a ng-href="#/documents/{{document.id}}">
+        {{document.title}}
+      </a>
+    </li>
+  </ul>
+</div>
+
+<span class="visible-xs-block">
+  <li ng-class="{ active: isActive('{{document.id}}')}" ng-repeat="document in documents | filter:search">
     <a ng-href="#/documents/{{document.id}}">
       {{document.title}}
     </a>
   </li>
-</ul>
+</span>

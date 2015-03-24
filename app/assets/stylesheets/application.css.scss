@@ -5,14 +5,12 @@
 @import "font-awesome-sprockets";
 @import "font-awesome";
 
-// Import fonts
-@import url(http://fonts.googleapis.com/css?family=Indie+Flower);
-
 // Import custom variables
 @import "variables";
 
 // Import utils
 @import "layout";
+@import "header";
 @import "forms";
 @import "boxes";
 @import "animate";
