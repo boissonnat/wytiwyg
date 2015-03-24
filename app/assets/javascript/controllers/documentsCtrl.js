@@ -11,28 +11,28 @@ angular.module('mouApp')
 
         }
 
-        $scope.addPost = function () {
+        $scope.addDocument = function () {
             Documents.create({document: {title: $scope.document.title, body: $scope.document.body}}, function (data) {
                 console.log('Data = ' + data.title);
-                $rootScope.$broadcast('userLoggedIn', data);
+                $rootScope.$broadcast('refreshDocuments', data);
                 $window.location.href = '#/documents/' + data.id;
             });
         };
 
-        $scope.updatePost = function () {
+        $scope.updateDocument = function () {
             Documents.update({id: $routeParams.documentId, document: $scope.document}, function (data) {
                 $window.location.href = '#/documents/' + $routeParams.documentId;
-                $rootScope.$broadcast('userLoggedIn', data);
+                $rootScope.$broadcast('refreshDocuments', data);
             });
         };
 
-        $scope.destroyPost = function () {
+        $scope.destroyDocument = function () {
             var confirmDelete = $window.confirm('Are you absolutely sure you want to delete?');
 
             if (confirmDelete) {
                 Documents.destroy({id: $routeParams.documentId}, function () {
                     $window.location.href = '#/home';
-                    $rootScope.$broadcast('userLoggedIn');
+                    $rootScope.$broadcast('refreshDocuments');
                 });
             }
 

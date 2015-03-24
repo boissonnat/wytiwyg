@@ -3,7 +3,7 @@
   <input id="nameElm" name="title" type="text" ng-model="document.title" class="form-control" required/>
 </div>
 
-<div markdown-actions></div>
+<div mou-markdown-actions></div>
 
 <div class="form-group">
   <label class="sr-only" for="bodyElm">Body</label>
@@ -15,7 +15,7 @@
 <div class="form-actions">
   <a ng-href="#/documents/{{document.id}}" class="btn btn-default">Cancel</a>
   <button type="submit" ng-disabled="documentForm.$invalid" class="btn btn-primary">
-    <i class="fa fa-spinner fa-spin" wait-button></i>
+    <i class="fa fa-spinner fa-spin" mou-wait-button></i>
     Save
   </button>
 </div>

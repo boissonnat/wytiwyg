@@ -32,41 +32,46 @@ mouApp.config([
 
     }])
 
-mouApp.directive('documentList', function (Documents) {
+mouApp.directive('mouDocumentsList', function (Documents) {
     return {
+        restrict: 'A',
         templateUrl: 'documents/_list.html',
         controller: 'DocumentsListCtrl',
         link: function (scope) {
-            scope.$on('userLoggedIn', function () {
+            scope.$on('refreshDocuments', function () {
                 scope.documents = Documents.index();
             });
         }
     }
 });
 
-mouApp.directive('markdownActions', function () {
+mouApp.directive('mouMarkdownActions', function () {
     return {
+        restrict: 'A',
         templateUrl: 'documents/_markdown_actions.html',
         controller: 'MarkdownCtrl'
     }
 });
 
-mouApp.directive('documentForm', function () {
+mouApp.directive('mouDocumentForm', function () {
     return {
+        restrict: 'A',
         templateUrl: 'documents/_form.html',
         controller: 'DocumentsCtrl'
     }
 });
 
-mouApp.directive('documentInfos', function () {
+mouApp.directive('mouDocumentInfos', function () {
     return {
+        restrict: 'A',
         templateUrl: 'documents/_infos.html',
         controller: 'DocumentsCtrl'
     }
 });
 
-mouApp.directive('waitButton',   ['$http' ,function ($http) {
+mouApp.directive('mouWaitButton', ['$http' ,function ($http) {
     return {
+        restrict: 'A',
         link: function (scope, elm) {
             scope.isLoading = function () {
                 return $http.pendingRequests.length > 0;
