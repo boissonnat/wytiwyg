@@ -1,6 +1,6 @@
 <section id="login">
 
-  <h1>Markdown web editor</h1>
+  <h1>"What You Type Is What You Get"</h1>
 
 
   <div class="row">
@@ -8,9 +8,9 @@
 
       <h2>Please sign in</h2>
 
-      <%= render "layouts/messages" %>
-
       <%= form_for(:user, :url => session_path(:user), :role => 'form') do |f| %>
+
+        <%= render "layouts/messages" %>
 
         <!-- Email -->
         <div class="form-group">
