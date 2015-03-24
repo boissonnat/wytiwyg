@@ -1,0 +1,30 @@
+a:focus {
+  outline: none;
+  text-decoration: none;
+}
+
+li.active > a {
+  text-decoration: none;
+}
+
+h1.funny {
+  font-family: 'Indie Flower', cursive;
+  font-size: 1.6em;
+  text-align: center;
+  margin: 0;
+  margin-bottom: $line-height * 0.5;
+}
+
+h2.funny {
+  font-size: 1.6em;
+  text-align: center;
+  margin: 0;
+  margin-bottom: $line-height * 0.5;
+}
+
+a.navbar-brand {
+  font-family: 'Indie Flower', cursive;
+  font-size: 2em;
+  padding-left: 20px;
+  padding-right: 50px;
+}

@@ -1,0 +1,23 @@
+section#document {
+
+  border: solid 1px $gray-lighter;
+  padding: $line-height * 0.4;
+  box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.3);
+  background-color: #ffffff;
+  margin-bottom: $line-height;
+
+  h1 {
+    border-bottom: solid 1px $gray-lighter;
+    padding-bottom: $line-height * 0.3;
+  }
+
+  .markdown {
+    h1 {
+      font-weight: 500;
+    }
+
+    h2 {
+      font-weight: 300;
+    }
+  }
+}

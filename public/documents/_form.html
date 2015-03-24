@@ -1,0 +1,18 @@
+<div class="form-group">
+  <label class="sr-only" for="nameElm">Title</label>
+  <input id="nameElm" name="title" type="text" ng-model="document.title" class="form-control" required/>
+</div>
+
+<div markdown-actions></div>
+
+<div class="form-group">
+  <label class="sr-only" for="bodyElm">Body</label>
+        <textarea id="bodyElm" name="body" class="form-control" rows="20"
+                  ng-model="document.body" ng-change="change(document.body)" required>
+        </textarea>
+</div>
+
+<div class="form-actions">
+  <a ng-href="#/documents/{{document.id}}" class="btn btn-default">Cancel</a>
+  <button type="submit" ng-disabled="documentForm.$invalid" class="btn btn-primary">Save</button>
+</div>

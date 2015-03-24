@@ -1,0 +1,14 @@
+section#login {
+  h1, h2 {
+    text-align: center;
+  }
+  h1 {
+    color: $brand-primary;
+    margin-top: $line-height * 2;
+    margin-bottom: $line-height * 2;
+  }
+  h2 {
+    font-family: 'Indie Flower', cursive;
+    margin-bottom: $line-height;
+  }
+}

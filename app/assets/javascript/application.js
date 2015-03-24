@@ -1,0 +1,13 @@
+//= require jquery
+//= require jquery_ujs
+//= require bootstrap-sprockets
+//= require angular
+//= require angular-resource
+//= require angular-ui-router
+//= require angular-route
+//= require angular-animate
+//= require mouApp
+//= require controllers/documentsCtrl
+//= require controllers/documentsListCtrl
+//= require controllers/markdownCtrl
+//= require services/documentsServices

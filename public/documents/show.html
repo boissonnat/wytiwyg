@@ -1,0 +1,19 @@
+<section id="document">
+
+  <h1>
+  <span class="btn-group pull-right" role="group" aria-label="...">
+    <a ng-href="/#/documents/edit/{{document.id}}" class="btn btn-default">
+      <i class="fa fa-pencil"></i> Edit
+    </a>
+    <a ng-click="destroyPost()" class="btn btn-default">
+      <i class="fa fa-trash"></i> Destroy
+    </a>
+  </span>
+    {{document.title}}
+  </h1>
+
+  <div class="markdown">
+    <div ng-bind-html="document.bodyHtml | rawHtml"></div>
+  </div>
+
+</section>
