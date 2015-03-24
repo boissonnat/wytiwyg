@@ -1,5 +1,5 @@
 angular.module('mouApp')
-    .controller('MarkdownCtrl', function ($rootScope, $window, $scope, $http, $sce, $location, $routeParams, Documents) {
+    .controller('MarkdownCtrl', function ($rootScope, $window, $scope) {
 
 
         $scope.appendTitle = function () {
@@ -9,12 +9,12 @@ angular.module('mouApp')
 
         $scope.appendBold = function () {
             var bodyElm = document.getElementById("bodyElm"); //.value += "#";
-            insertAtCursor(bodyElm, '_ _');
+            insertAtCursor(bodyElm, '__ __');
         }
 
         $scope.appendItalic = function () {
             var bodyElm = document.getElementById("bodyElm"); //.value += "#";
-            insertAtCursor(bodyElm, '__ __');
+            insertAtCursor(bodyElm, '_ _');
         }
 
         $scope.appendLink = function () {
