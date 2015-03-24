@@ -53,13 +53,20 @@ mouApp.directive('documentList', function(Documents) {
 mouApp.directive('markdownActions', function() {
     return {
         templateUrl: 'documents/_markdown_actions.html',
-        controller: 'MarkdownCtrl',
+        controller: 'MarkdownCtrl'
     }
 });
 
 mouApp.directive('documentForm', function() {
     return {
         templateUrl: 'documents/_form.html',
-        controller: 'DocumentsCtrl',
+        controller: 'DocumentsCtrl'
+    }
+});
+
+mouApp.directive('documentInfos', function() {
+    return {
+        templateUrl: 'documents/_infos.html',
+        controller: 'DocumentsCtrl'
     }
 });
