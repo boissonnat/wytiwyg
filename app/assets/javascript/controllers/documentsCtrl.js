@@ -1,9 +1,11 @@
 angular.module('mouApp')
     .controller('DocumentsCtrl', function ($rootScope, $window, $scope, $http, $sce, $location, $routeParams, Documents) {
 
+        var converter = new Showdown.converter();
+
         if ($routeParams.documentId) {
             $scope.document = Documents.show({id: $routeParams.documentId}, function(data){
-                $scope.result = $sce.trustAsHtml(data.bodyHtml);
+                $scope.bodyHtml = $sce.trustAsHtml(converter.makeHtml(data.body));
             });
 
         }
@@ -31,9 +33,6 @@ angular.module('mouApp')
         };
 
         $scope.change = function (body) {
-            $http.post('/parse_markdown', {markdown: body}).success(function (data) {
-                $scope.result = $sce.trustAsHtml(data);
-            });
+            $scope.bodyHtml = $sce.trustAsHtml(converter.makeHtml(body));
         }
-
     });

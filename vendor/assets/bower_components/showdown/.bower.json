@@ -25,14 +25,15 @@
     "mdown"
   ],
   "license": "https://github.com/showdownjs/showdown/blob/master/license.txt",
-  "version": "0.3.4",
-  "_release": "0.3.4",
+  "version": "0.4.0",
+  "_release": "0.4.0",
   "_resolution": {
     "type": "version",
-    "tag": "0.3.4",
-    "commit": "24c34596c198fde7bea61aeccc60045258bfd103"
+    "tag": "0.4.0",
+    "commit": "e7a4a4084257d788b7c039c2252d9e00eb749e41"
   },
   "_source": "git://github.com/showdownjs/showdown.git",
-  "_target": "~0.3.1",
-  "_originalSource": "showdown"
+  "_target": "~0.4.0",
+  "_originalSource": "showdown",
+  "_direct": true
 }

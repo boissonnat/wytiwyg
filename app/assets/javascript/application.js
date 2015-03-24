@@ -6,6 +6,7 @@
 //= require angular-ui-router
 //= require angular-route
 //= require angular-animate
+//= require showdown
 //= require mouApp
 //= require controllers/documentsCtrl
 //= require controllers/documentsListCtrl

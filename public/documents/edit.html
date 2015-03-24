@@ -16,13 +16,8 @@
         {{document.title}}
       </h1>
 
-      <div class="markdown">
+      <div class="markdown" ng-bind-html="bodyHtml"></div>
 
-
-        <p ng-bind-html="result">
-          {{result}}
-        </p>
-      </div>
     </section>
   </div>
 </div>

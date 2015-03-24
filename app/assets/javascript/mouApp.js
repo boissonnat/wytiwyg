@@ -32,12 +32,6 @@ mouApp.config([
 
     }])
 
-mouApp.filter('rawHtml', ['$sce', function($sce){
-    return function(val) {
-        return $sce.trustAsHtml(val);
-    };
-}]);
-
 mouApp.directive('documentList', function(Documents) {
     return {
         templateUrl: 'documents/_list.html',
