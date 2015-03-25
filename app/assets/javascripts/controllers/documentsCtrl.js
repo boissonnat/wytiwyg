@@ -26,7 +26,10 @@ angular.module('mouApp')
             };
 
             $scope.updateDocument = function () {
-                Documents.update({id: $routeParams.documentId, document: $scope.document}, function (data) {
+                Documents.update({
+                    id: $routeParams.documentId,
+                    document: $scope.document
+                }, function (data) {
                     $window.location.href = '#/documents/' + $routeParams.documentId;
                     $rootScope.$broadcast('refreshDocuments', data);
                 });

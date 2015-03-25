@@ -32,16 +32,16 @@ mouApp.config([
 
     }])
 
-mouApp.directive('mouDocumentsList', [function (Documents) {
+mouApp.directive('mouDocumentsList', ['Documents', function (Documents) {
     return {
         restrict: 'A',
         templateUrl: 'documents/_list.html',
         controller: 'DocumentsListCtrl',
-        link: ['scope', function (scope) {
+        link: function (scope) {
             scope.$on('refreshDocuments', function () {
                 scope.documents = Documents.index();
             });
-        }]
+        }
     }
 }]);
 
