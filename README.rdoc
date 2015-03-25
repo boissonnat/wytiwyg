@@ -1,28 +1,36 @@
-== README
+== wy-T-iwyg !
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+wy-T-iwyg stands for What You *Type* is What You Get.
+This is a basic platform for sharing documents built over a powerful markdown editor with a fully real-time rendering.
 
-Things you may want to cover:
+The front-end is entirely manage with AngularJS (giving a try to AngularJS stayed my first motivation to this project) 
+just after the boring registration stuff while Ruby on Rails takes care of the business model.
 
-* Ruby version
+=== Demo available on Heroku
 
-* System dependencies
+A demo is available on heroku : https://wytiwyg.herokuapp.com
 
-* Configuration
+=== What does this app
 
-* Database creation
+In some (several?) cases, wikis, blogs, etc... are over complicated.
+The main purpose of this application is to allow co-workers sharing their knowledge  through a simple but efficient solution !
 
-* Database initialization
+Here is the list of the main features available in this version :
 
-* How to run the test suite
+- Protect every document behind an authentication process
+- CRUD operations available on all documents
+- Markdown edition with real-time HTML renderer, shortcuts for markdown edition and code syntax highlighting
+- Fully responsive design
 
-* Services (job queues, cache servers, search engines, etc.)
+=== What this app does not (yet!)
 
-* Deployment instructions
+At this time we are in front of one-day coding app, a more or less .
+If we find some interest in the concepts, here is a list of improvements this app could have in a near future :
 
-* ...
 
-
-Please feel free to use a different markup language if you do not plan to run
-<tt>rake doc:app</tt>.
+- Download documents as PDF (generated from Markdown)
+- Categorize documents with tags
+- Manage visibility through a concept of circles and subscriptions
+- Adding a global search (and not just a filter on title)
+- Consider the document's visibility for non connected user (public documents)
+- Tracking the documents' modification (using Git ?)
