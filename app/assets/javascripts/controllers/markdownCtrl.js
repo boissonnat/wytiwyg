@@ -1,5 +1,5 @@
 angular.module('mouApp')
-    .controller('MarkdownCtrl', function ($rootScope, $window, $scope) {
+    .controller('MarkdownCtrl', ['$scope', function ($scope) {
 
 
         $scope.appendTitle = function () {
@@ -55,4 +55,4 @@ angular.module('mouApp')
                 myField.value += myValue;
             }
         }
-    });
+    }]);

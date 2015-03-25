@@ -1,5 +1,5 @@
 angular.module('mouApp')
-    .controller('HomeCtrl', function ($scope, $sce, $http, $timeout) {
+    .controller('HomeCtrl', ['$scope', '$sce', '$http', '$timeout', function ($scope, $sce, $http, $timeout) {
 
         // In order to not write twice the same boring text. Use a markdown file, converted for HTML rendering
         $http.get('/markdown_overview.md').
@@ -14,4 +14,4 @@ angular.module('mouApp')
                 }, 1, true);
             });
 
-    });
+    }]);

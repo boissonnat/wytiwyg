@@ -32,7 +32,7 @@ mouApp.config([
 
     }])
 
-mouApp.directive('mouDocumentsList', function (Documents) {
+mouApp.directive('mouDocumentsList', [function (Documents) {
     return {
         restrict: 'A',
         templateUrl: 'documents/_list.html',
@@ -43,31 +43,31 @@ mouApp.directive('mouDocumentsList', function (Documents) {
             });
         }
     }
-});
+}]);
 
-mouApp.directive('mouMarkdownActions', function () {
+mouApp.directive('mouMarkdownActions', [function () {
     return {
         restrict: 'A',
         templateUrl: 'documents/_markdown_actions.html',
         controller: 'MarkdownCtrl'
     }
-});
+}]);
 
-mouApp.directive('mouDocumentForm', function () {
+mouApp.directive('mouDocumentForm', [function () {
     return {
         restrict: 'A',
         templateUrl: 'documents/_form.html',
         controller: 'DocumentsCtrl'
     }
-});
+}]);
 
-mouApp.directive('mouDocumentInfos', function () {
+mouApp.directive('mouDocumentInfos', [function () {
     return {
         restrict: 'A',
         templateUrl: 'documents/_infos.html',
         controller: 'DocumentsCtrl'
     }
-});
+}]);
 
 mouApp.directive('mouWaitButton', ['$http' ,function ($http) {
     return {
