@@ -7,23 +7,12 @@ input.ng-invalid.ng-touched, textarea.ng-invalid.ng-touched, .field_with_errors 
 }
 
 .fixed {
-  position: fixed;
-}
-
-@media (min-width: $screen-xs-min) and (max-width: $screen-xs-max) {
-  .fixed {
-    position: relative;
-  }
-}
-
-@media (min-width: $screen-sm-min) and (max-width: $screen-sm-max) {
-  .fixed {
-    position: relative;
-  }
+  position: relative;
 }
 
 @media (min-width: $screen-md-min)  {
   .fixed {
+    position: fixed;
     width: 32%;
   }
 }
