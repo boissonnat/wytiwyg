@@ -1,5 +1,5 @@
 angular.module('mouApp')
-    .factory('Documents', function($resource) {
+    .factory('Documents', ['$resource', function($resource) {
         var DocumentsService = $resource('/documents/:id', {id: '@id'}, {
             'create': { method: 'POST' },
             'index': { method: 'GET', isArray: true },
@@ -8,5 +8,5 @@ angular.module('mouApp')
             'destroy': { method: 'DELETE' }
     });
     return DocumentsService;
-});
+}]);
 
