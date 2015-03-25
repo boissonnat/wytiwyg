@@ -37,11 +37,11 @@ mouApp.directive('mouDocumentsList', [function (Documents) {
         restrict: 'A',
         templateUrl: 'documents/_list.html',
         controller: 'DocumentsListCtrl',
-        link: function (scope) {
+        link: ['scope', function (scope) {
             scope.$on('refreshDocuments', function () {
                 scope.documents = Documents.index();
             });
-        }
+        }]
     }
 }]);
 
