@@ -10,6 +10,7 @@ gem 'rails', '4.1.8'
 ############################################################################################
 # Use sqlite3 for testing and Pg for other environments
 gem 'pg'
+gem 'sqlite3'
 
 ## UI : bootstrap with SASS and FontAwesome
 ############################################################################################
