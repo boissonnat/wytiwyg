@@ -44,7 +44,7 @@ So, first of, you will need to install ruby, I recommand to managing your Ruby i
 through [rbenv](https://github.com/sstephenson/rbenv).
 It’s an easy way to run multiple versions for different applications and update when a new release is made.
 
-The inside your local project folder :
+Then, inside your local project folder :
 
 ```
 $ bundle install
