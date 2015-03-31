@@ -1,13 +1,13 @@
 <div class="form-group">
   <label class="sr-only" for="nameElm">Title</label>
-  <input id="nameElm" name="title" type="text" ng-model="document.title" class="form-control" required/>
+  <input id="nameElm" name="title" type="text" ng-model="document.title" class="form-control" placeholder="Title" required/>
 </div>
 
-<div mou-markdown-actions></div>
+<div class="actions-toolbar" mou-markdown-actions></div>
 
 <div class="form-group">
   <label class="sr-only" for="bodyElm">Body</label>
-        <textarea id="bodyElm" name="body" class="form-control" rows="20"
+        <textarea id="bodyElm" name="body" class="form-control" rows="20" placeholder="Content of your document"
                   ng-model="document.body" ng-change="change(document.body)" required>
         </textarea>
 </div>

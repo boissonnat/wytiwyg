@@ -10,6 +10,67 @@ input.ng-invalid.ng-touched, textarea.ng-invalid.ng-touched, .field_with_errors 
   position: relative;
 }
 
+input, .form-control {
+  background: transparent;
+  padding: 4px;
+  width: 100%;
+  border: none;
+  outline: none;
+  opacity: 0.6;
+  border-radius: 0;
+  box-shadow: none;
+}
+
+textarea.form-control {
+  resize: none;
+  color: #2c3e50;
+}
+
+.actions-toolbar:before {
+  margin-bottom: 8px;
+}
+
+.actions-toolbar:after {
+  margin-top: 8px;
+}
+
+.actions-toolbar:before, .actions-toolbar:after {
+  display: block;
+  content: ' ';
+  height: 1px;
+  background-color: #bdc3c7;
+  background: -moz-linear-gradient(45deg, #f9f9f9, #bdc3c7, #f9f9f9);
+  background: -webkit-linear-gradient(45deg, #f9f9f9, #bdc3c7, #f9f9f9);
+  background: -ms-linear-gradient(45deg, #f9f9f9, #bdc3c7, #f9f9f9);
+  background: linear-gradient(45deg, #f9f9f9, #bdc3c7, #f9f9f9);
+}
+
+.actions-toolbar {
+  text-align: center;
+  margin-bottom: $line-height;
+  .btn-default {
+    color: #2c3e50 !important;
+    border: none;
+    background-color: transparent;
+  }
+
+  i.separator {
+    display: inline-block;
+    width: 0;
+    border-left: 1px solid #d9d9d9;
+    border-right: 1px solid white;
+    color: transparent;
+    text-indent: -10px;
+    margin: 0 6px;
+  }
+}
+
+.form-actions {
+  border-top: 1px solid #ece9e9;
+  padding-top: $line-height * 0.5;
+  color: #959694;
+}
+
 @media (min-width: $screen-md-min)  {
   .fixed {
     position: fixed;
